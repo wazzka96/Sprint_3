@@ -40,6 +40,7 @@ class TestRegistration:
         assert WebDriverWait(init_driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Оформить заказ')]")))   # проверка наличия кнопки оформления заказа (как дополнительный факт подтверждения успешного перехода)
 
+
     # Тест на ошибку для некорректного пароля
     def test_registration_invalid_password(self, init_driver):
         mail = faker.email()
